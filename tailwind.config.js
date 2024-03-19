@@ -17,12 +17,13 @@ export default {
         'sans': ['Alef', 'sans-serif'],
       },
       fontSize: {
-        'deskH1': '191px', 
+        'deskH1': '100px', 
         'deskH2': '84px', 
         'deskH3': '59px', 
-        'deskH4': '42px', 
+        'deskH4': '32px', 
         'deskH5': '30px', 
-        'deskH6': '21px', 
+        'deskH6': '15px', 
+        'paraH1': '21px',
 
         'phoneH1': '55px', 
         'phoneH2': '44px', 
@@ -72,6 +73,7 @@ export default {
         'deskH1': 'bold', 
         'deskH2': 'bold', 
         'deskH3': 'bold', 
+        'deskH6': 'bold', 
 
         'phoneH1': 'bold', 
         'phoneH2': 'bold', 
@@ -102,8 +104,16 @@ export default {
           10: 'rgba(38, 31, 34, 0.1)',   // Opacité 10%
           5: 'rgba(38, 31, 34, 0.05)',  
         },
-
-      }
+      },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '250px',
+        },
+      },
     },
   },
   plugins: [
