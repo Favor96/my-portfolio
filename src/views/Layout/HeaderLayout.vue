@@ -1,13 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="border border-b border-black-10 bg-white lg:fixed lg:w-full lg:top-0 lg:z-10 ">
+  <div class="border border-b border-black-10 bg-white lg:fixed lg:w-full lg:top-0 ">
     <div class="max-sm:hidden max-lg:hidden m-14 mb-0 mt-0 h-16 flex flex-row space-x-4">
       <div class="items-center w-1/2  flex flex-row space-x-8">
         <div class="">Logo</div>
         <div class="text-deskH6 font-bold">A propos de moi</div>
         <div class="text-deskH6 font-bold">Contact</div>
       </div>
-      <div class="items-center justify-end w-1/2 flex flex-row space-x-4">
+      <div class="items-center justify-end w-1/2 flex flex-row  space-x-4">
         <div class="flex flex-row space-x-6">
           <div class="text-deskH6 font-bold text-primary">
             abbeyfavor@gmail.com
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="lg:hidden flex  max-sm:mx-4 mx-10 flex-row justify-between items-center">
+    <div class="lg:hidden flex  max-sm:mx-5  max-sm:py-4 mx-10 flex-row justify-between items-center">
       <div>Logo</div>
       <div class="flex flex-row items-center space-x-16">
         <div class="flex max-sm:hidden flex-row space-x-8">
@@ -57,5 +57,7 @@
 </script>
 
 <style>
+
+
 
 </style>
