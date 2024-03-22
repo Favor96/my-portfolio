@@ -4,8 +4,21 @@
     <div class="max-sm:hidden max-lg:hidden m-14 mb-0 mt-0 h-16 flex flex-row space-x-4">
       <div class="items-center w-1/2  flex flex-row space-x-8">
         <div class="">Logo</div>
-        <div class="text-deskH6 font-bold">A propos de moi</div>
-        <div class="text-deskH6 font-bold">Contact</div>
+        <div class="text-deskH6 font-bold">
+          <router-link :to="{name : 'home'}">
+            <a>Acceuil</a>
+          </router-link>
+        </div>
+        <div class="text-deskH6 font-bold">
+          <router-link :to="{name : 'aboutMe'}">
+            <a>A propos de moi</a>
+          </router-link>
+        </div>
+        <div class="text-deskH6 font-bold">
+          <router-link :to="{name : 'contact'}">
+            <a>Contact</a>
+          </router-link>
+        </div>
       </div>
       <div class="items-center justify-end w-1/2 flex flex-row  space-x-4">
         <div class="flex flex-row space-x-6">
@@ -13,7 +26,6 @@
             abbeyfavor@gmail.com
           </div>
           <div class="text-deskH6 font-bold ">+228 96 42 99 14 </div>
-          <div class="text-deskH6 font-bold">See my work</div>
         </div>
         <div class="flex flex-row space-x-4">
           <div>

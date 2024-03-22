@@ -1,8 +1,5 @@
 <template>
-  <div class="overflow-hidden">
-    <header-layout class="header"></header-layout>
-    <main>
-      <Hero class="fade-in intro"/>
+  <div>
       <ClientList class="fade-in"/>
       <MyWork/>
       <Work :image="photo1" class="slide-in from-left"/>
@@ -10,15 +7,10 @@
       <WorkList :image1="photo3" :image2="photo4" :image3="photo3" />
       <Testimony class="fade-in"/>
       <Cta class="slide-in from-left"/>
-    </main>
-    <Footer/>
   </div>
 </template>
 
 <script setup>
-import HeaderLayout from './Layout/HeaderLayout.vue';
-import Footer from './Layout/Footer.vue';
-import Hero from "@/components/Hero.vue"
 import ClientList from '@/components/ClientList.vue';
 import MyWork from '@/components/MyWork.vue';
 import Work from '@/components/Work.vue';
@@ -34,7 +26,6 @@ import { onMounted } from 'vue';
 onMounted(() => {
   const sliders = document.querySelectorAll('.slide-in');
   const faders = document.querySelectorAll('.fade-in');
-  const header = document.querySelector('.header'); // Change to querySelector
 
   const appearOptions = {
     threshold: 0,
@@ -59,24 +50,8 @@ onMounted(() => {
   sliders.forEach(slider => {
     appearOnScroll.observe(slider);
   });
-
-  const intro = document.querySelector('.intro'); // Change to querySelector
   
-  const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-  };
 
-  const sectionOneObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        header.classList.add("nav-scrolled");
-      } else {
-        header.classList.remove("nav-scrolled");
-      }
-    });
-  }, sectionOneOptions);
-
-  sectionOneObserver.observe(intro);
 })
 </script>
 
@@ -85,17 +60,13 @@ onMounted(() => {
   transform: translateX(-50%);
 }
 
-.from-right {
-  transform: translateX(50%);
-}
 
-.from-left,
-.from-right {
+
+.from-left{
   transition: transform 400ms ease-out;
 }
 
-.from-left.appear,
-.from-right.appear {
+.from-left.appear{
   transform: translateX(0);
 }
 
@@ -108,8 +79,4 @@ onMounted(() => {
   opacity: 1;
 }
 
-.nav-scrolled {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-  z-index: 20;
-}
 </style>
