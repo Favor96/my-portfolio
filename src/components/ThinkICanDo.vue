@@ -1,91 +1,157 @@
 <template>
-    <div class=" mt-[96px] max-sm:mt-12 flex flex-col space-y-8">
-        <div class="mx-[128px] flex flex-row space-x-6">
-            <div class="w-1/3 flex flex-col space-y-4 ">
+    <div class=" mt-[96px] max-sm:mt-12  flex flex-col space-y-8 slide-in">
+        <div
+            class="mx-[128px] flex flex-row space-x-6 max-sm:space-x-0 max-sm:mx-5 max-lg:mx-12 max-sm:flex-col max-lg:flex-col max-lg:space-x-0 max-lg:space-y-6 max-sm:space-y-6">
+            <div class="w-1/3 max-sm:w-full flex flex-col space-y-4 max-lg:w-full">
                 <div class="">
                     <font-awesome-icon :icon="faRocket" style="width: 40px; height: 60px;" />
                 </div>
-                <div class="text-paraH1 font-bold max-sm:text-phoneH6 max-lg:text-tabH6">Je peux faire le design d'un
+                <div class="text-paraH1 font-bold max-sm:text-phonePara max-lg:text-tabH6">Je peux faire le design d'un
                     site web responsive et le développer
                 </div>
-                <div class=" text-deskH6 max-sm:text-phonePara max-lg:text-paraTab text-black-75">Mon but est de créer
+                <div class=" text-deskH6 max-sm:text-phoneH6 max-lg:text-paraTab text-black-75">Mon but est de créer
                     des interfaces utilisateur accessibles et
                     responsive pour le web et
-                    le mobile, tout en préservant les meilleures pratiques pour une bonne expérience utilisateur.</div>
+                    le mobile, tout en préservant les meilleures pratiques pour une bonne expérience utilisateur.
+                </div>
             </div>
-            <div class="w-1/3 flex flex-col space-y-4 ">
+            <div class="w-1/3 max-sm:w-full flex flex-col space-y-4 max-lg:w-full">
                 <div class="">
                     <font-awesome-icon :icon="faShoppingCart" style="width: 40px; height: 60px;" />
                 </div>
-                <div class="text-paraH1 font-bold max-sm:text-phoneH6 max-lg:text-tabH6">Je peux faire le design d'un
+                <div class="text-paraH1 font-bold max-sm:text-phonePara max-lg:text-tabH6">Je peux faire le design d'un
                     site e-commerce responsive et le développer </div>
-                <div class="text-deskH6 max-sm:text-phonePara max-lg:text-paraTab text-black-75">J'ai une connaissance
+                <div class="text-deskH6 max-sm:text-phoneH6 max-lg:text-paraTab text-black-75">J'ai une connaissance
                     approfondie du développement front-end et back-end, ce qui me permet
                     de créer un site e-commerce entièrement fonctionnel.</div>
             </div>
-            <div class="w-1/3 flex flex-col space-y-4 ">
+            <div class="w-1/3 max-sm:w-full flex flex-col space-y-4 max-lg:w-full">
                 <div class="">
                     <font-awesome-icon :icon="faMobileAlt" style="width: 40px; height: 60px;" />
                 </div>
-                <div class="text-paraH1 font-bold max-sm:text-phoneH6 max-lg:text-tabH6">Je peux faire le design d'une
+                <div class="text-paraH1 font-bold max-sm:text-phonePara max-lg:text-tabH6">Je peux faire le design d'une
                     application mobile et le développer </div>
-                <div class="text-deskH6 max-sm:text-phonePara max-lg:text-paraTab text-black-75">J'ai également des
+                <div class="text-deskH6 max-sm:text-phoneH6 max-lg:text-paraTab text-black-75">J'ai également des
                     compétence en développement mobile. C’est un processus différent de la
                     conception de sites Web traditionnels, mais jusqu’à présent, j’ai réussi tous les projets.</div>
             </div>
         </div>
-        <div class=" h-16 flex justify-center">
-            <div class="w-[580px] bg-black-10 rounded-full  flex justify-center items-center">
-                <div class="flex flex-row space-x-6 ">
-                    <div class=" bg-black rounded-full">
-                        <p class="text-white m-4">Outils utilisés pour le design</p>
-                    </div>
-                    <div class="">
-                        <p class="m-4">Techno utilisés pour le développement</p>
+        <div class="h-16 max-sm:mx-5 ">
+            <div class="  w-full flex justify-center">
+                <div class="w-[580px] bg-black-10 rounded-full max-lg:w-1/3 max-sm:w-1/2 flex justify-center items-center">
+                    <div class="flex w-full flex-row space-x-6  max-sm:space-x-4 max-sm:p-2 max-lg:p-2">
+                        <div
+                            class=" max-sm:w-1/2 max-lg:w-full bg-black rounded-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center">
+                            <p class="text-white m-4 max-sm:hidden max-lg:hidden">Outils utilisés pour le design</p>
+                            <font-awesome-icon :icon="faTools" class="hidden max-sm:flex max-lg:flex text-white m-5" />
+                        </div>
+                        <div
+                            class="max-sm:w-1/2 max-lg:w-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center">
+                            <p class="m-4 max-sm:hidden  max-lg:hidden">Techno utilisés pour le développement</p>
+                            <font-awesome-icon :icon="faCode"
+                                class="hidden max-sm:flex max-lg:flex text-white m-5 max-lg:m-0" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="">
-            <div class="mx-[128px] flex flex-row space-x-4">
-                <div class="w-1/4  bg-black-10">
-                    <div class="flex flex-col my-6 space-y-3">
+        <div class="mx-[128px]  max-sm:mx-5  ">
+            <div class="hidden max-sm:flex lg:flex w-full space-x-4 max-sm:space-x-0 max-sm:flex-col max-sm:space-y-6">
+
+                <div class="w-1/4 max-sm:w-full bg-black-10    ">
+                    <div
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
-                            <font-awesome-icon :icon="faLaravel" class="text-primary w-10 h-14" />
+                            <font-awesome-icon :icon="faLaravel" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
                         <p class="text-center">Laravel</p>
                     </div>
                 </div>
-                <div class="w-1/4  bg-black-10">
-                    <div class="flex flex-col my-6 space-y-3">
+                <div class="w-1/4 max-sm:w-full bg-black-10  ">
+                    <div
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
-                            <font-awesome-icon :icon="faPython" class="text-primary w-10 h-14" />
+                            <font-awesome-icon :icon="faPython" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
-                        <p class="text-center">Djang</p>
+                        <p class="text-center">Django</p>
                     </div>
                 </div>
-                <div class="w-1/4  bg-black-10">
-                    <div class="flex flex-col my-6 space-y-3">
+                <div class="w-1/4 max-sm:w-full bg-black-10 ">
+                    <div
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
-                            <font-awesome-icon :icon="faVuejs" class="text-primary w-10 h-14" />
+                            <font-awesome-icon :icon="faVuejs" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
                         <p class="text-center">Vuejs</p>
                     </div>
                 </div>
-                <div class="w-1/4  bg-black-10">
-                    <div class="flex flex-col my-6 space-y-3">
+                <div class="w-1/4 max-sm:w-full bg-black-10 ">
+                    <div
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
-                            <font-awesome-icon :icon="faCss3" class="text-primary w-10 h-14"/>
+                            <font-awesome-icon :icon="faCss3" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
                         <p class="text-center">Tailwind css</p>
                     </div>
                 </div>
-                <div class="w-1/4  bg-black-10">
-                    <div class="flex flex-col my-6 space-y-3">
+                <div class="w-1/4 max-sm:w-full bg-black-10 ">
+                    <div
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
-                            <font-awesome-icon :icon="faMobileAlt" class="text-primary w-10 h-14 " />
+                            <font-awesome-icon :icon="faMobileAlt"
+                                class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
                         <p class="text-center">Flutter</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hidden max-sm:hidden max-lg:flex flex-col w-full space-y-6">
+                <div class="flex flex-row justify-center  space-x-6 slide-in from-left">
+                    <div class="w-1/4  bg-black-10 p-2">
+                        <div class="flex flex-row space-x-4 ">
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faLaravel" class="text-primary  w-8 h-8" />
+                            </div>
+                            <p class="text-center">Laravel</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4  bg-black-10 p-2">
+                        <div class="flex flex-row space-x-4">
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faPython" class="text-primary  w-8 h-8" />
+                            </div>
+                            <p class="text-center">Django</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-6 justify-center slide-in from-right">
+                    <div class="w-1/3  bg-black-10 p-2">
+                        <div class="flex flex-row space-x-4">
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faVuejs" class="text-primary  w-8 h-8" />
+                            </div>
+                            <p class="text-center">Vuejs</p>
+                        </div>
+                    </div>
+                    <div class="w-1/3  bg-black-10 p-2">
+                        <div class="flex flex-row space-x-4">
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faCss3" class="text-primary  w-8 h-8" />
+                            </div>
+                            <p class="text-center">Tailwind css</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-6 justify-center ">
+                    <div class="w-1/4  bg-black-10 p-2">
+                        <div class="flex flex-row space-x-4">
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faMobileAlt" class="text-primary w-8 h-8 " />
+                            </div>
+                            <p class="text-center">Fluter</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,10 +161,77 @@
 
 <script setup>
 import { faCss3, faLaravel, faPython, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { faMobileAlt, faRocket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMobileAlt, faRocket, faShoppingCart, faTools } from '@fortawesome/free-solid-svg-icons';
+
+import { onMounted } from 'vue';
 
 
+onMounted(() => {
+  const sliders = document.querySelectorAll('.slide-in');
+  const faders = document.querySelectorAll('.fade-in');
 
+  const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px 0px -300px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+  sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+  });
+
+//   const observer = new IntersectionObserver(entries => {
+//   // entries est un tableau d'objets représentant les changements dans l'intersection pour chaque élément observé
+//   entries.forEach(entry => {
+//     // Si l'élément devient visible
+//     if (entry.isIntersecting) {
+//       console.log("L'élément est visible !");
+//       console.log("rootMargin actuel :", observer.rootMargin);
+//     }
+//   });
+// }, {
+//   // Définir les options de l'Intersection Observer
+//   // rootMargin contrôle la marge autour du viewport pour laquelle les événements de changement de visibilité sont déclenchés
+//   rootMargin: '-400px 0px 0px 0px', // Vous pouvez ajuster cette valeur selon vos besoins
+//   threshold: 0 // La proportion de l'élément visible pour déclencher l'événement (0 signifie qu'il est déclenché dès que l'élément devient partiellement visible)
+// });
+
+// sliders.forEach(slider => {
+//     observer.observe(slider);
+//   });
+})
 </script>
 
-<style></style>
+<style scoped>
+.from-left {
+  transform: translateX(-50%);
+}
+
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: transform 400ms ease-out;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+}
+</style>

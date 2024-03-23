@@ -21,15 +21,13 @@ import photo2 from '../assets/photo2.png';
 import photo3 from '../assets/photo3.jpg';
 import photo4 from '../assets/photo4.jpg';
 import WorkList from "@/components/WorkList.vue"
-import { onMounted } from 'vue';
 
-onMounted(() => {
   const sliders = document.querySelectorAll('.slide-in');
   const faders = document.querySelectorAll('.fade-in');
 
   const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -100px 0px"
+    rootMargin: "0px 0px -800px 0px"
   };
 
   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -50,9 +48,7 @@ onMounted(() => {
   sliders.forEach(slider => {
     appearOnScroll.observe(slider);
   });
-  
 
-})
 </script>
 
 <style scoped>
@@ -63,11 +59,17 @@ onMounted(() => {
 
 
 .from-left{
-  transition: transform 400ms ease-out;
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
 }
 
 .from-left.appear{
+  -webkit-transform: translateX(0);
   transform: translateX(0);
+  opacity: 1;
 }
 
 .fade-in {

@@ -1,14 +1,17 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="mt-[96px] max-sm:mt-12 mx-14 ">
-        <div class="mx-36 flex flex-col space-y-4 ">
-            <div class="mt-6">
-                <p class="text-deskH3 max-sm:text-phoneH3 max-lg:text-tabH3 font-bold text-black">Je suis ABBEY Favor</p>
+    <div class="mt-[96px] max-sm:mt-12 max-lg:mt-10 mx-14 max-sm:mx-7 max-lg:mx-6 ">
+        <div class="mx-36 max-sm:mx-0 max-lg:mx-6 flex flex-col space-y-4 ">
+            <div class="mt-6 max-sm:mt-0">
+                <p class="text-deskH3 max-sm:text-phoneH3 max-lg:text-tabH3 font-bold text-black">Je suis ABBEY Favor
+                </p>
             </div>
-            <div class="w-3/5 flex flex-col space-y-2 text-black-75 text-deskH6 max-sm:text-phoneH6 max-lg:text-tabH6">
+            <div
+                class="w-3/5 max-sm:w-full max-lg:w-full flex flex-col space-y-2 text-black-75 text-deskH6 max-sm:text-phoneH6 max-lg:text-tabH6">
                 <p>
                     Je suis née à lomé. Dès mon plus jeune age, j’ai montré un intêret pour les ordinateur et cela s’est
                     transformé en passion au lycée.
+
                 </p>
                 <p>
                     Je me suis lancé dans la conception et le développement des sites web à l’universités. Fréquenter

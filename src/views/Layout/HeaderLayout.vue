@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="lg:hidden flex  max-sm:mx-5  max-sm:py-4 mx-10 flex-row justify-between items-center">
+    <div class="lg:hidden flex  max-sm:mx-7  max-sm:py-4 mx-10 flex-row justify-between items-center">
       <div>Logo</div>
       <div class="flex flex-row items-center space-x-16">
         <div class="flex max-sm:hidden flex-row space-x-8">
