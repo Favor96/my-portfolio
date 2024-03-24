@@ -27,7 +27,7 @@ import WorkList from "@/components/WorkList.vue"
 
   const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -800px 0px"
+    rootMargin: "0px 0px -300px 0px"
   };
 
   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -56,17 +56,19 @@ import WorkList from "@/components/WorkList.vue"
   transform: translateX(-50%);
 }
 
+.from-right {
+  transform: translateX(50%);
+}
 
-
-.from-left{
-  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in,
-    -webkit-transform 400ms ease-in;
+.from-left, .from-right {
+  transition: opacity 750ms ease-in, -webkit-transform 750ms ease-in;
+  transition: opacity 750ms ease-in, transform 750ms ease-in;
+  transition: opacity 750ms ease-in, transform 750ms ease-in,
+    -webkit-transform 750ms ease-in;
   opacity: 0;
 }
 
-.from-left.appear{
+.from-left.appear, .from-right.appear{
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
@@ -74,7 +76,7 @@ import WorkList from "@/components/WorkList.vue"
 
 .fade-in {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 750ms ease-in;
 }
 
 .fade-in.appear {

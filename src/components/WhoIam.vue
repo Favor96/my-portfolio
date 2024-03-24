@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="mt-[96px] max-sm:mt-12 max-lg:mt-10 mx-14 max-sm:mx-7 max-lg:mx-6 ">
+    <div class="mt-[96px] max-sm:mt-14 max-lg:mt-10 mx-14 max-sm:mx-7 max-lg:mx-6 ">
         <div class="mx-36 max-sm:mx-0 max-lg:mx-6 flex flex-col space-y-4 ">
             <div class="mt-6 max-sm:mt-0">
                 <p class="text-deskH3 max-sm:text-phoneH3 max-lg:text-tabH3 font-bold text-black">Je suis ABBEY Favor

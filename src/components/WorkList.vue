@@ -51,8 +51,8 @@ const props = defineProps({
 onMounted(() => {
   const sliders = document.querySelectorAll('.slide-in');
   const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -100px 0px"
+    threshold: 1,
+    rootMargin: "0px"
   };
 
   const appearOnScroll = new IntersectionObserver(function (
@@ -92,8 +92,9 @@ onMounted(() => {
 
 
 .from-left,
-.from-right, .from-top {
-  transition: transform 400ms ease-in;
+.from-right,
+.from-top {
+  transition: transform 750ms ease-in;
 }
 
 .from-left.appear,
@@ -101,7 +102,7 @@ onMounted(() => {
   transform: translateX(0);
 }
 
-.from-top.appear{
+.from-top.appear {
   transform: translateY(0);
 }
 </style>

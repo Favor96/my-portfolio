@@ -30,7 +30,7 @@ const initIntersectionObserver = () => {
   const header = document.querySelector('.header');
 
   const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px -100px"
+    rootMargin: "0px 0px -100px 0px"
   };
 
   const sectionOneObserver = new IntersectionObserver(function (entries) {
@@ -45,6 +45,7 @@ const initIntersectionObserver = () => {
 
   const introElement = document.querySelector('.intro');
 
+  // Si l'élément intro est trouvé, observer ses changements d'intersection
   if (introElement) {
     sectionOneObserver.observe(introElement);
   }

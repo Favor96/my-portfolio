@@ -3,7 +3,7 @@
 <template>
       <div>
           <PictureVue class="fade-in"/>
-          <think-i-can-do class=""/>
+          <think-i-can-do />
           <Cta class="mt-32 slide-in from-left" />
       </div>
 </template>
@@ -12,15 +12,16 @@
 import PictureVue from '@/components/Picture.vue';
 import ThinkICanDo from '@/components/ThinkICanDo.vue';
 import Cta from '@/components/Cta.vue';
-
+import { onMounted } from 'vue';
+onMounted(() => {
   const sliders = document.querySelectorAll('.slide-in');
   const faders = document.querySelectorAll('.fade-in');
-
+  
   const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -500px 0px"
+    rootMargin: "0px 0px -200px 0px"
   };
-
+  
   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
@@ -32,14 +33,17 @@ import Cta from '@/components/Cta.vue';
       }
     });
   }, appearOptions);
-
+  
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-
+  
   sliders.forEach(slider => {
     appearOnScroll.observe(slider);
   });
+
+})
+
 </script>
 
 <style scoped>
@@ -51,18 +55,15 @@ import Cta from '@/components/Cta.vue';
   transform: translateX(50%);
 }
 
-.from-left,
-.from-right {
-  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in,
-    -webkit-transform 400ms ease-in;
+.from-left, .from-right {
+  transition: opacity 750ms ease-in, -webkit-transform 750ms ease-in;
+  transition: opacity 750ms ease-in, transform 750ms ease-in;
+  transition: opacity 750ms ease-in, transform 750ms ease-in,
+    -webkit-transform 750ms ease-in;
   opacity: 0;
 }
 
-.from-left.appear,
-.from-right.appear {
-  -webkit-transform: translateX(0);
+.from-left.appear, .from-right.appear{
   transform: translateX(0);
   opacity: 1;
 }
