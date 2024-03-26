@@ -17,7 +17,7 @@
                     Si vous recherchez un designeur et un développeur pour vos projet informatique, parlons-en.</p>
                 <p class="text-paraH1 max-sm:text-phonePara max-lg:text-paraTab max-sm:text-start text-black-75" v-else>
                     Utilisez le formulaire pour me donner le plus de détails possible et je vous répondrai dans les plus
-                    brefs délais.<br /> vous pouvez également me contacter en remplissant le formulaire ci-dessous ou
+                    brefs délais.<br /> vous pouvez également nous contacter en utilisant les informations ci-dessous ou
                     me contacter via les réseaux sociaux.</p>
             </div>
             <div class="flex  justify-start max-sm:justify-center max-sm:items-center space-x-6"
