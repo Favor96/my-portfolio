@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-left" >
-                    <div v-if="toggleTool"
+                    <div 
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faMobileAlt"
