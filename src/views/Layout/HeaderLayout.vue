@@ -5,7 +5,7 @@
       <div class="bg-white ">
 
         <div class="lg:hidden flex top-0 pb-0 px-7 z-20 left-0 right-0 bg-white fixed flex-row justify-between items-center">
-          <div>Logo</div>
+          <div class="w-10 h-10"><img :src="pf" alt=""></div>
           <div class="flex flex-row items-center space-x-16">
             <div class="flex max-sm:hidden flex-row space-x-8">
               <div>
@@ -27,7 +27,7 @@
         </div>
         <div class="  mb-0 mt-0 h-16 lg:flex " :class="[navbarOpen ? 'flex flex-col h-auto fixed top-10 left-0 right-0 px-14 py-2 z-20 bg-white' : 'hidden m-14 flex-row space-x-4']">
           <div class="items-center   flex" :class="[navbarOpen ? 'flex-col space-y-2' : ' flex-row space-x-8 w-1/2']">
-            <div class="max-sm:hidden ">Logo</div>
+            <div class="max-sm:hidden max-lg:hidden w-10 h-10"><img :src="pf" alt=""></div>
             <div class="text-deskH6 font-bold">
               <router-link :to="{ name: 'home' }">
                 <a>Acceuil</a>
@@ -81,6 +81,7 @@
 <script setup>
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { ref } from 'vue';
+import pf from '../../assets/pf.png'
 
 var navbarOpen = ref(false)
 

@@ -6,15 +6,16 @@
                 <p class="text-black-50 text-center">J'ai eu le privilège de travailler pour certaines entreprises</p>
             </div>
             <div class="flex flex-row items-center justify-center">
-                <font-awesome-icon :icon="['fab', 'microsoft']" :style="{width: '56px', height: '49px' }" />
-                <font-awesome-icon :icon="['fab', 'apple']" :style="{width: '56px', height: '49px' ,}" />
-                <font-awesome-icon :icon="['fab', 'amazon']" :style="{width: '56px', height: '49px' ,}" />
+                <div class="w-14  h-12">
+                    <img :src="kalamar" alt="">
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import kalamar from '../assets/kalamar.jpg'
 </script>
 
 <style></style>

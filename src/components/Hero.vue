@@ -11,9 +11,7 @@
                     Développeur fulstack web & mobile</p>
             </div>
             <div class="flex items-center w-1/2 max-sm:w-full justify-center">
-                <p class="text-center text-paraH1  max-sm:text-phonePara max-lg:text-paraTab text-black-75">I help
-                    business grow by crafting amazing web experiences. If you’re
-                    looking for a designer and developer that likes to get stuff done, let’s talk.</p>
+                <p class="text-center text-paraH1  max-sm:text-phonePara max-lg:text-paraTab text-black-75">J'aide les entreprises à se développer en créant des expériences Web incroyables. Si vous recherchez un développeur qui aime faire avancer les choses, parlons-en.</p>
             </div>
         </div>
         <div

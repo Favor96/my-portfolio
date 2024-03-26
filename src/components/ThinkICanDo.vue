@@ -41,14 +41,14 @@
                 <div class="w-[580px] bg-black-10 rounded-full max-lg:w-1/3 max-sm:w-1/2 flex justify-center items-center">
                     <div class="flex w-full flex-row space-x-6  max-sm:space-x-4 max-sm:p-2 max-lg:p-2">
                         <div
-                            class=" max-sm:w-1/2 max-lg:w-full bg-black rounded-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center">
-                            <p class="text-white m-4 max-sm:hidden max-lg:hidden">Outils utilisés pour le design</p>
-                            <font-awesome-icon :icon="faTools" class="hidden max-sm:flex max-lg:flex text-white m-5" />
+                            class=" max-sm:w-1/2 max-lg:w-full  rounded-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center" @click="toogle" :class="[toggleTool ? 'bg-black text-white' : 'bg-black-10 text-black' ]">
+                            <p class="m-4 max-sm:hidden max-lg:hidden">Techno utilisés pour le développement </p>
+                            <font-awesome-icon :icon=" faCode" class="hidden max-sm:flex max-lg:flex text-white m-5" />
                         </div>
                         <div
-                            class="max-sm:w-1/2 max-lg:w-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center">
-                            <p class="m-4 max-sm:hidden  max-lg:hidden">Techno utilisés pour le développement</p>
-                            <font-awesome-icon :icon="faCode"
+                            class="max-sm:w-1/2 max-lg:w-full rounded-full flex max-sm:justify-center max-lg:justify-center max-lg:items-center" @click="toogle" :class="[!toggleTool ? 'bg-black text-white' : 'bg-black-10' ]">
+                            <p class="m-4 max-sm:hidden  max-lg:hidden">Outils utilisés pour le design</p>
+                            <font-awesome-icon :icon="faTools"
                                 class="hidden max-sm:flex max-lg:flex text-white m-5 max-lg:m-0" />
                         </div>
                     </div>
@@ -59,16 +59,23 @@
             <div class="hidden max-sm:flex lg:flex w-full space-x-4 max-sm:space-x-0 max-sm:flex-col max-sm:space-y-6">
 
                 <div class="w-1/4 max-sm:w-full bg-black-10  slide-in from-left ">
-                    <div
+                    <div v-if="toggleTool"
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faLaravel" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
                         </div>
                         <p class="text-center">Laravel</p>
                     </div>
+                    <div v-else
+                        class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
+                        <div class="flex justify-center">
+                            <font-awesome-icon :icon="faFigma" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
+                        </div>
+                        <p class="text-center">Figma</p>
+                    </div>
                 </div>
-                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-left ">
-                    <div
+                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-left " >
+                    <div v-if="toggleTool"
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faPython" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
@@ -76,8 +83,8 @@
                         <p class="text-center">Django</p>
                     </div>
                 </div>
-                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-right">
-                    <div
+                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-right"  >
+                    <div v-if="toggleTool"
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faVuejs" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
@@ -85,8 +92,8 @@
                         <p class="text-center">Vuejs</p>
                     </div>
                 </div>
-                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-right">
-                    <div
+                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-right" >
+                    <div v-if="toggleTool"
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faCss3" class="text-primary w-10 h-14 max-sm:w-8 max-sm:h-8" />
@@ -94,8 +101,8 @@
                         <p class="text-center">Tailwind css</p>
                     </div>
                 </div>
-                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-left">
-                    <div
+                <div class="w-1/4 max-sm:w-full bg-black-10 slide-in from-left" >
+                    <div v-if="toggleTool"
                         class="flex flex-col my-6 space-y-3 max-sm:my-2 max-sm:space-y-1 max-sm:space-x-6 max-sm:items-center max-sm:flex-row max-sm:ml-4">
                         <div class="flex justify-center">
                             <font-awesome-icon :icon="faMobileAlt"
@@ -110,14 +117,20 @@
             <div class="hidden max-sm:hidden max-lg:flex flex-col w-full space-y-6">
                 <div class="flex flex-row justify-center  space-x-6 slide-in from-left">
                     <div class="w-1/4  bg-black-10 p-2">
-                        <div class="flex flex-row space-x-4 ">
+                        <div class="flex flex-row space-x-4 "  v-if="toggleTool">
                             <div class="flex justify-center">
                                 <font-awesome-icon :icon="faLaravel" class="text-primary  w-8 h-8" />
                             </div>
                             <p class="text-center">Laravel</p>
                         </div>
+                        <div class="flex flex-row space-x-4 "  v-else>
+                            <div class="flex justify-center">
+                                <font-awesome-icon :icon="faFigma" class="text-primary  w-8 h-8" />
+                            </div>
+                            <p class="text-center">Figma</p>
+                        </div>
                     </div>
-                    <div class="w-1/4  bg-black-10 p-2">
+                    <div class="w-1/4  bg-black-10 p-2" v-if="toggleTool">
                         <div class="flex flex-row space-x-4">
                             <div class="flex justify-center">
                                 <font-awesome-icon :icon="faPython" class="text-primary  w-8 h-8" />
@@ -126,8 +139,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row space-x-6 justify-center slide-in from-right">
-                    <div class="w-1/3  bg-black-10 p-2">
+                <div class="flex flex-row space-x-6 justify-center slide-in from-right" >
+                    <div class="w-1/3  bg-black-10 p-2" v-if="toggleTool">
                         <div class="flex flex-row space-x-4">
                             <div class="flex justify-center">
                                 <font-awesome-icon :icon="faVuejs" class="text-primary  w-8 h-8" />
@@ -135,7 +148,7 @@
                             <p class="text-center">Vuejs</p>
                         </div>
                     </div>
-                    <div class="w-1/3  bg-black-10 p-2">
+                    <div class="w-1/3  bg-black-10 p-2" v-if="toggleTool">
                         <div class="flex flex-row space-x-4">
                             <div class="flex justify-center">
                                 <font-awesome-icon :icon="faCss3" class="text-primary  w-8 h-8" />
@@ -145,7 +158,7 @@
                     </div>
                 </div>
                 <div class="flex flex-row space-x-6 justify-center slide-in from-left">
-                    <div class="w-1/4  bg-black-10 p-2">
+                    <div class="w-1/4  bg-black-10 p-2" v-if="toggleTool">
                         <div class="flex flex-row space-x-4">
                             <div class="flex justify-center">
                                 <font-awesome-icon :icon="faMobileAlt" class="text-primary w-8 h-8 " />
@@ -160,10 +173,16 @@
 </template>
 
 <script setup>
-import { faCss3, faLaravel, faPython, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faFigma, faLaravel, faPython, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faMobileAlt, faRocket, faShoppingCart, faTools } from '@fortawesome/free-solid-svg-icons';
 
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+
+const toggleTool = ref(true);
+
+const toogle = () => {
+    toggleTool.value = !toggleTool.value
+}
 
 
 onMounted(() => {
@@ -194,25 +213,6 @@ onMounted(() => {
     appearOnScroll.observe(slider);
   });
 
-//   const observer = new IntersectionObserver(entries => {
-//   // entries est un tableau d'objets représentant les changements dans l'intersection pour chaque élément observé
-//   entries.forEach(entry => {
-//     // Si l'élément devient visible
-//     if (entry.isIntersecting) {
-//       console.log("L'élément est visible !");
-//       console.log("rootMargin actuel :", observer.rootMargin);
-//     }
-//   });
-// }, {
-//   // Définir les options de l'Intersection Observer
-//   // rootMargin contrôle la marge autour du viewport pour laquelle les événements de changement de visibilité sont déclenchés
-//   rootMargin: '-400px 0px 0px 0px', // Vous pouvez ajuster cette valeur selon vos besoins
-//   threshold: 0 // La proportion de l'élément visible pour déclencher l'événement (0 signifie qu'il est déclenché dès que l'élément devient partiellement visible)
-// });
-
-// sliders.forEach(slider => {
-//     observer.observe(slider);
-//   });
 })
 </script>
 
