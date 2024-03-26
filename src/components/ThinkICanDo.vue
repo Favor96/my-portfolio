@@ -194,25 +194,6 @@ onMounted(() => {
     appearOnScroll.observe(slider);
   });
 
-//   const observer = new IntersectionObserver(entries => {
-//   // entries est un tableau d'objets représentant les changements dans l'intersection pour chaque élément observé
-//   entries.forEach(entry => {
-//     // Si l'élément devient visible
-//     if (entry.isIntersecting) {
-//       console.log("L'élément est visible !");
-//       console.log("rootMargin actuel :", observer.rootMargin);
-//     }
-//   });
-// }, {
-//   // Définir les options de l'Intersection Observer
-//   // rootMargin contrôle la marge autour du viewport pour laquelle les événements de changement de visibilité sont déclenchés
-//   rootMargin: '-400px 0px 0px 0px', // Vous pouvez ajuster cette valeur selon vos besoins
-//   threshold: 0 // La proportion de l'élément visible pour déclencher l'événement (0 signifie qu'il est déclenché dès que l'élément devient partiellement visible)
-// });
-
-// sliders.forEach(slider => {
-//     observer.observe(slider);
-//   });
 })
 </script>
 

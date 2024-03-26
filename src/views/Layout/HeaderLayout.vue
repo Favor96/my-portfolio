@@ -27,7 +27,7 @@
         </div>
         <div class="  mb-0 mt-0 h-16 lg:flex " :class="[navbarOpen ? 'flex flex-col h-auto fixed top-10 left-0 right-0 px-14 py-2 z-20 bg-white' : 'hidden m-14 flex-row space-x-4']">
           <div class="items-center   flex" :class="[navbarOpen ? 'flex-col space-y-2' : ' flex-row space-x-8 w-1/2']">
-            <div class="max-sm:hidden ">Logo</div>
+            <div class="max-sm:hidden max-lg:hidden">Logo</div>
             <div class="text-deskH6 font-bold">
               <router-link :to="{ name: 'home' }">
                 <a>Acceuil</a>
